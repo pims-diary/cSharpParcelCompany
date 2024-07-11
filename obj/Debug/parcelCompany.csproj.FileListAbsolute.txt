@@ -1,0 +1,14 @@
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\bin\Debug\parcelCompany.exe.config
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\bin\Debug\parcelCompany.exe
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\bin\Debug\parcelCompany.pdb
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.csproj.SuggestedBindingRedirects.cache
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.Form1.resources
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.Properties.Resources.resources
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.csproj.GenerateResource.cache
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.exe
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.pdb
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.loginPageStaff.resources
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.Dashborad.resources
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.dashboard.resources
