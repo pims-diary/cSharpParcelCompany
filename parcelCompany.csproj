@@ -46,42 +46,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dashboard.cs">
+    <Compile Include="DataLinkLayer\DataInteraction\BaseData.cs" />
+    <Compile Include="DataLinkLayer\DataInteraction\CustomerData.cs" />
+    <Compile Include="DataLinkLayer\DataInteraction\ParcelData.cs" />
+    <Compile Include="DataLinkLayer\DataInteraction\UserData.cs" />
+    <Compile Include="DataLinkLayer\Models\ContainerDetails.cs" />
+    <Compile Include="DataLinkLayer\Models\DeliveryDetails.cs" />
+    <Compile Include="DataLinkLayer\Models\ReceiverDetails.cs" />
+    <Compile Include="DataLinkLayer\Models\UserDetails.cs" />
+    <Compile Include="DataLinkLayer\Models\SenderDetails.cs" />
+    <Compile Include="DataLinkLayer\Models\CustomerDetails.cs" />
+    <Compile Include="DataLinkLayer\Models\DriverDetails.cs" />
+    <Compile Include="DataLinkLayer\Models\ParcelDetails.cs" />
+    <Compile Include="Resources\ParcelConstants.cs" />
+    <Compile Include="UserInterfaceLayer\dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dashboard.Designer.cs">
+    <Compile Include="UserInterfaceLayer\dashboard.Designer.cs">
       <DependentUpon>dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dashborad.cs">
+    <Compile Include="UserInterfaceLayer\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashborad.Designer.cs">
-      <DependentUpon>Dashborad.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="UserInterfaceLayer\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="loginPageStaff.cs">
+    <Compile Include="UserInterfaceLayer\loginPageStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="loginPageStaff.Designer.cs">
+    <Compile Include="UserInterfaceLayer\loginPageStaff.Designer.cs">
       <DependentUpon>loginPageStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="dashboard.resx">
+    <EmbeddedResource Include="UserInterfaceLayer\dashboard.resx">
       <DependentUpon>dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dashborad.resx">
-      <DependentUpon>Dashborad.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
+    <EmbeddedResource Include="UserInterfaceLayer\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="loginPageStaff.resx">
+    <EmbeddedResource Include="UserInterfaceLayer\loginPageStaff.resx">
       <DependentUpon>loginPageStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -119,5 +123,6 @@
   <ItemGroup>
     <None Include="Resources\wrong-icon-graphic-design-template-vector-24504466.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

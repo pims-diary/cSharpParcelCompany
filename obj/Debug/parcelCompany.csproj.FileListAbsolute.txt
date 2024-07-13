@@ -10,5 +10,4 @@ C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCom
 C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.exe
 C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.pdb
 C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.loginPageStaff.resources
-C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.Dashborad.resources
 C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.dashboard.resources
