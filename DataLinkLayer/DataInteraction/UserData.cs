@@ -1,13 +1,5 @@
-﻿using parcelCompany.DataLinkLayer.Models;
-using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Drawing.Printing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace parcelCompany.DataLinkLayer.DataInteraction
 {
@@ -24,7 +16,6 @@ namespace parcelCompany.DataLinkLayer.DataInteraction
         {
             try
             {
-                
                 string query = "select * from Login where Username = '" + username + "' and Password = '" + password + "'";
                 SqlDataAdapter sda = new SqlDataAdapter(query, this.conn);
                 DataTable dTable = new DataTable();

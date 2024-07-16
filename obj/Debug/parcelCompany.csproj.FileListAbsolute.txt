@@ -3,7 +3,6 @@ C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCom
 C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\bin\Debug\parcelCompany.pdb
 C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.csproj.AssemblyReference.cache
 C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.csproj.SuggestedBindingRedirects.cache
-C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.Form1.resources
 C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.Properties.Resources.resources
 C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.csproj.GenerateResource.cache
 C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.csproj.CoreCompileInputs.cache
@@ -11,3 +10,10 @@ C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCom
 C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.pdb
 C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.loginPageStaff.resources
 C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.dashboard.resources
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\ParcelCompany\obj\Debug\parcelCompany.UserInterfaceLayer.CreateCustomer.resources
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\ParcelCompany\obj\Debug\parcelCompany.UserInterfaceLayer.UpdateCustomer.resources
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\ParcelCompany\obj\Debug\parcelCompany.UserInterfaceLayer.DeleteCustomer.resources
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\ParcelCompany\obj\Debug\parcelCompany.UserInterfaceLayer.SearchCustomer.resources
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\ParcelCompany\obj\Debug\parcelCompany.UserInterfaceLayer.CreateParcel.resources
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\ParcelCompany\obj\Debug\parcelCompany.UserInterfaceLayer.ViewParcel.resources
+C:\Users\admin\Documents\SOFT606(Destop_app)\Assign1_20220661(SOFT606)\parcelCompany\obj\Debug\parcelCompany.Home.resources

@@ -46,8 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\ParcelController.cs" />
     <Compile Include="DataLinkLayer\DataInteraction\BaseData.cs" />
     <Compile Include="DataLinkLayer\DataInteraction\CustomerData.cs" />
+    <Compile Include="DataLinkLayer\DataInteraction\DriverData.cs" />
     <Compile Include="DataLinkLayer\DataInteraction\ParcelData.cs" />
     <Compile Include="DataLinkLayer\DataInteraction\UserData.cs" />
     <Compile Include="DataLinkLayer\Models\ContainerDetails.cs" />
@@ -59,17 +62,35 @@
     <Compile Include="DataLinkLayer\Models\DriverDetails.cs" />
     <Compile Include="DataLinkLayer\Models\ParcelDetails.cs" />
     <Compile Include="Resources\ParcelConstants.cs" />
-    <Compile Include="UserInterfaceLayer\dashboard.cs">
+    <Compile Include="UserInterfaceLayer\CreateCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInterfaceLayer\dashboard.Designer.cs">
-      <DependentUpon>dashboard.cs</DependentUpon>
+    <Compile Include="UserInterfaceLayer\CreateCustomer.Designer.cs">
+      <DependentUpon>CreateCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserInterfaceLayer\Form1.cs">
+    <Compile Include="UserInterfaceLayer\CreateParcel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInterfaceLayer\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UserInterfaceLayer\CreateParcel.Designer.cs">
+      <DependentUpon>CreateParcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\DeleteCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\DeleteCustomer.Designer.cs">
+      <DependentUpon>DeleteCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="UserInterfaceLayer\loginPageStaff.cs">
       <SubType>Form</SubType>
@@ -79,11 +100,39 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="UserInterfaceLayer\dashboard.resx">
-      <DependentUpon>dashboard.cs</DependentUpon>
+    <Compile Include="UserInterfaceLayer\SearchCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\SearchCustomer.Designer.cs">
+      <DependentUpon>SearchCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\UiUtility.cs" />
+    <Compile Include="UserInterfaceLayer\updateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\updateCustomer.Designer.cs">
+      <DependentUpon>updateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\ViewParcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInterfaceLayer\ViewParcel.Designer.cs">
+      <DependentUpon>ViewParcel.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UserInterfaceLayer\CreateCustomer.resx">
+      <DependentUpon>CreateCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserInterfaceLayer\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="UserInterfaceLayer\CreateParcel.resx">
+      <DependentUpon>CreateParcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterfaceLayer\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterfaceLayer\DeleteCustomer.resx">
+      <DependentUpon>DeleteCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterfaceLayer\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserInterfaceLayer\loginPageStaff.resx">
       <DependentUpon>loginPageStaff.cs</DependentUpon>
@@ -98,6 +147,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserInterfaceLayer\SearchCustomer.resx">
+      <DependentUpon>SearchCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterfaceLayer\updateCustomer.resx">
+      <DependentUpon>updateCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInterfaceLayer\ViewParcel.resx">
+      <DependentUpon>ViewParcel.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -123,6 +181,20 @@
   <ItemGroup>
     <None Include="Resources\wrong-icon-graphic-design-template-vector-24504466.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\a462e91a92a6e8b69c8b82ca79fc2f46.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percel_com.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5d95df677be36.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

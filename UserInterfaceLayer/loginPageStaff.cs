@@ -1,13 +1,6 @@
 ﻿using parcelCompany.DataLinkLayer.DataInteraction;
+using parcelCompany.UserInterfaceLayer;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace parcelCompany
@@ -23,27 +16,28 @@ namespace parcelCompany
         {
             UserData userData = new UserData();
 
+            // Login validation happens below.
+            // The result of Login validation is storred in the form of Enum
             LoginStatus status = userData.ValidateLogin(username.Text, password.Text);
 
             if (status == LoginStatus.Success)
             {
-                //page that needs to be loaded
-                dashboard form2 = new dashboard();
-                form2.Show();
+                // Navigate to Dashboard page for successful login
+                Dashboard dashboard = new Dashboard();
+                dashboard.Show();
                 this.Hide();
             }
             else if (status == LoginStatus.Failure)
             {
-                MessageBox.Show("Invalid user credentails", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                UiUtility.showError("Invalid user credentails", "Error");
                 username.Clear();
                 password.Clear();
 
                 username.Focus();
-
             }
             else if(status == LoginStatus.ServerError)
             {
-                MessageBox.Show("ERROR");
+                UiUtility.showError("Something went wrong", "Error");
             }
         }
     }

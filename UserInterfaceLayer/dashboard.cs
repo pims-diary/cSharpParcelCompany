@@ -1,5 +1,6 @@
 ﻿using parcelCompany.DataLinkLayer.DataInteraction;
 using parcelCompany.DataLinkLayer.Models;
+using parcelCompany.UserInterfaceLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,37 +13,60 @@ using System.Windows.Forms;
 
 namespace parcelCompany
 {
-    public partial class dashboard : Form
+    public partial class Dashboard : Form
     {
-        public dashboard()
+        public Dashboard()
         {
             InitializeComponent();
-            // createCustomer();
-            // updateParcel();
         }
 
-        public void createCustomer()
+        private void registerNewCustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CustomerDetails customer = new CustomerDetails();
-            customer.CustomerId = "1002";
-            customer.CustomerName = "John";
-            customer.CustomerEmail = "john@gmail.com";
-            customer.CustomerAddress = "SilverDale";
-            customer.CustomerPhone = "021345678";
-
-            CustomerData customerData = new CustomerData();
-            customerData.CreateCustomer(customer);
+            CreateCustomer createCustomerPage = new CreateCustomer();
+            createCustomerPage.Show();
+            this.Hide();
         }
 
-        public void updateParcel() 
+        private void updateExistingCustomerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Dictionary<string, object> customerInfo = new Dictionary<string, object>();
+            UpdateCustomer updateCustomerPage = new UpdateCustomer();
+            updateCustomerPage.Show();
+            this.Hide();
+        }
 
-            customerInfo.Add(Resources.CustomerConstants.CustomerName, "Dom");
-            customerInfo.Add(Resources.CustomerConstants.CustomerAddress, "Kemeu");
+        private void deleteExistingCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteCustomer deleteCustomerPage = new DeleteCustomer();
+            deleteCustomerPage.Show();
+            this.Hide();
+        }
 
-            CustomerData customerData = new CustomerData();
-            customerData.UpdateCustomer(customerInfo, "1002");
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchCustomer searchCustomerPage = new SearchCustomer();
+            searchCustomerPage.Show();
+            this.Hide();
+        }
+
+        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ViewParcel viewParcelPage = new ViewParcel(Root.Dashboard, "");
+            viewParcelPage.Show();
+            this.Hide();
+        }
+
+        private void createToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateParcel createParcelPage = new CreateParcel();
+            createParcelPage.Show();
+            this.Hide();
+        }
+
+        private void searchbttn_Click(object sender, EventArgs e)
+        {
+            ViewParcel viewParcelPage = new ViewParcel(Root.Dashboard, searchtextBox.Text);
+            viewParcelPage.Show();
+            this.Hide();
         }
     }
 }

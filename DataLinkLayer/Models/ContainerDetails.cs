@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace parcelCompany.DataLinkLayer.Models
 {
-    enum ContainerType
+    public enum ContainerType
     {
         Drum,
         Box,
@@ -14,19 +14,14 @@ namespace parcelCompany.DataLinkLayer.Models
         Receptacle
     }
 
-    enum VesselSize
+    public enum VesselSize
     {
-        OneKG,
-        TwoKG,
-        ThreeKG,
-        FiveKG,
-        TenKG,
-        FifteenKg,
-        TwentyKG,
-        TwentyFiveKG
+        Small,
+        Medium,
+        Large
     }
 
-    internal class ContainerDetails
+    public class ContainerDetails
     {
         public ContainerType containerType { get; set; }
         public VesselSize vesselSize { get; set; }

@@ -1,6 +1,6 @@
 ﻿namespace parcelCompany
 {
-    partial class Form1
+    partial class Home
     {
         /// <summary>
         /// Required designer variable.
@@ -42,7 +42,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Uighur", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(294, 9);
+            this.label1.Location = new System.Drawing.Point(364, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(564, 62);
             this.label1.TabIndex = 1;
@@ -52,7 +52,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Mistral", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(392, 90);
+            this.label2.Location = new System.Drawing.Point(488, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(326, 38);
             this.label2.TabIndex = 2;
@@ -81,6 +81,7 @@
             this.customerbttn.TabIndex = 5;
             this.customerbttn.Text = "Customer";
             this.customerbttn.UseVisualStyleBackColor = true;
+            this.customerbttn.Click += new System.EventHandler(this.customerbttn_Click);
             // 
             // pictureBox2
             // 
@@ -95,13 +96,12 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::parcelCompany.Properties.Resources.UML__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(88, -8);
+            this.pictureBox1.Location = new System.Drawing.Point(154, -12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(215, 172);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form1
             // 

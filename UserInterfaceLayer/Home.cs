@@ -1,4 +1,5 @@
-﻿using System;
+﻿using parcelCompany.UserInterfaceLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,16 +11,11 @@ using System.Windows.Forms;
 
 namespace parcelCompany
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
-        public Form1()
+        public Home()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -29,8 +25,15 @@ namespace parcelCompany
 
         private void staffbttn_Click(object sender, EventArgs e)
         {
-            loginPageStaff form2 = new loginPageStaff();
-            form2.Show();
+            loginPageStaff loginPage = new loginPageStaff();
+            loginPage.Show();
+            this.Hide();
+        }
+
+        private void customerbttn_Click(object sender, EventArgs e)
+        {
+            ViewParcel viewParcelPage = new ViewParcel(Root.Home, "");
+            viewParcelPage.Show();
             this.Hide();
         }
     }

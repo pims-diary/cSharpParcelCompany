@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace parcelCompany.DataLinkLayer.Models
 {
-    internal class ParcelDetails
+    public class ParcelDetails
     {
         public string parcelTrackId { get; set; }
         public string customerId { get; set; }

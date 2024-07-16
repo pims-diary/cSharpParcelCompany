@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace parcelCompany.DataLinkLayer.Models
 {
-    internal class ReceiverDetails
+    public class ReceiverDetails
     {
-        public string ReceiverName { get; set; }
-        public string ReceiverPhone { get; set; }
-        public string ReceiverAddress { get; set; }
+        public string receiverName { get; set; }
+        public string receiverPhone { get; set; }
+        public string receiverAddress { get; set; }
     }
 }

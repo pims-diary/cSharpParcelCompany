@@ -1,7 +1,7 @@
 ﻿using parcelCompany.DataLinkLayer.Models;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using parcelCompany.Resources;
+using System;
 
 namespace parcelCompany.DataLinkLayer.DataInteraction
 {
@@ -33,7 +33,8 @@ namespace parcelCompany.DataLinkLayer.DataInteraction
                                                         "Tax, " +
                                                         "TotalCost, " +
                                                         "DeliveryNotes," +
-                                                        "CustomerNotes) " +
+                                                        "CustomerNotes, " +
+                                                        "RemotePickUp) " +
                                                         "VALUES(" +
                                                         "@ParcelTrackID, " +
                                                         "@CustomerID, " +
@@ -57,7 +58,8 @@ namespace parcelCompany.DataLinkLayer.DataInteraction
                                                         "@Tax, " +
                                                         "@TotalCost, " +
                                                         "@DeliveryNotes, " +
-                                                        "@CustomerNotes)";
+                                                        "@CustomerNotes, " +
+                                                        "@RemotePickUp)";
             SqlCommand cmd = new SqlCommand(insertCommandString, conn);
             cmd.Parameters.AddWithValue("@ParcelTrackID", parcel.parcelTrackId);
             cmd.Parameters.AddWithValue("@CustomerID", parcel.customerId);
@@ -67,11 +69,11 @@ namespace parcelCompany.DataLinkLayer.DataInteraction
             cmd.Parameters.AddWithValue("@SenderAddress", parcel.sender.senderAddress);
             cmd.Parameters.AddWithValue("@SenderPhone", parcel.sender.senderPhone);
             cmd.Parameters.AddWithValue("@SenderEmail", parcel.sender.senderEmail);
-            cmd.Parameters.AddWithValue("@ReceiverName", parcel.receiver.ReceiverName);
-            cmd.Parameters.AddWithValue("@ReceiverAddress", parcel.receiver.ReceiverAddress);
-            cmd.Parameters.AddWithValue("@ReceiverPhone", parcel.receiver.ReceiverPhone);
+            cmd.Parameters.AddWithValue("@ReceiverName", parcel.receiver.receiverName);
+            cmd.Parameters.AddWithValue("@ReceiverAddress", parcel.receiver.receiverAddress);
+            cmd.Parameters.AddWithValue("@ReceiverPhone", parcel.receiver.receiverPhone);
             cmd.Parameters.AddWithValue("@PickUpDate", parcel.delivery.pickUpDate);
-            cmd.Parameters.AddWithValue("@DropOffDate", parcel.delivery.dropOffDate);
+            cmd.Parameters.AddWithValue("@DropOffDate", DateTime.Now);
             cmd.Parameters.AddWithValue("@DriverName", parcel.driver.driverName);
             cmd.Parameters.AddWithValue("@DriverPhone", parcel.driver.driverPhone);
             cmd.Parameters.AddWithValue("@DriverVehiclePlate", parcel.driver.driverVehiclePlate);
@@ -82,38 +84,72 @@ namespace parcelCompany.DataLinkLayer.DataInteraction
             cmd.Parameters.AddWithValue("@TotalCost", parcel.totalCost);
             cmd.Parameters.AddWithValue("@DeliveryNotes", parcel.delivery.deliveryNotes);
             cmd.Parameters.AddWithValue("@CustomerNotes", parcel.delivery.customerNotes);
+            cmd.Parameters.AddWithValue("@RemotePickUp", parcel.delivery.remotePickUp);
 
             cmd.ExecuteNonQuery();
             conn.Close();
         }
 
-        public void UpdateParcel(List<ParcelConstants> param, List<object> value, string trackId)
+        public void UpdateParcel(Dictionary<string, object> parcelInfo, string trackId)
         {
-            string updatedParams = "";
-            if (param != null)
+            if (parcelInfo != null)
             {
-                foreach (ParcelConstants parcel in param)
+                string updatedParams = "";
+
+                foreach (KeyValuePair<string, object> info in parcelInfo)
                 {
-                    updatedParams += " " + parcel.ToString() + "=@" + parcel.ToString() + ",";
+                    updatedParams += " " + info.Key + "=@" + info.Key + ",";
                 }
+
                 updatedParams = updatedParams.Remove(updatedParams.Length - 1);
+
+                string query = "UPDATE ParcelInfo SET" + updatedParams + " WHERE ParcelTrackID=@ParcelTrackID";
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@ParcelTrackID", trackId);
+
+                foreach (KeyValuePair<string, object> info in parcelInfo)
+                {
+                    cmd.Parameters.AddWithValue("@" + info.Key, info.Value);
+                }
+
+                cmd.ExecuteNonQuery();
+                conn.Close();
             }
+        }
 
-            string query = "UPDATE parcelInfo SET" + updatedParams + " WHERE ParcelTrackID=@ParcelTrackID";
+        public string GetLastTrackId()
+        {
+            SqlCommand cmd = new SqlCommand("SELECT ParcelTrackID FROM ParcelInfo WHERE ParcelTrackID=(SELECT max(ParcelTrackID) FROM parcelInfo)", conn);
+            string trackId = cmd.ExecuteScalar().ToString();
+            conn.Close();
+            return trackId;
+        }
 
-            SqlCommand cmd = new SqlCommand(query, conn);
+        public SqlDataAdapter searchParcel(string trackId)
+        {
+            if (doesParcelExist(trackId))
+            {
+                SqlCommand cmd = new SqlCommand("select * from ParcelInfo where ParcelTrackID=@ParcelTrackID", conn);
+                cmd.Parameters.AddWithValue("@ParcelTrackID", trackId);
+                SqlDataAdapter data = new SqlDataAdapter(cmd);
+                conn.Close();
+                return data;
+            }
+            return null;
+        }
+
+        public bool doesParcelExist(string trackId)
+        {
+            SqlCommand cmd = new SqlCommand("select COUNT(*) from ParcelInfo where ParcelTrackID=@ParcelTrackID", conn);
             cmd.Parameters.AddWithValue("@ParcelTrackID", trackId);
 
-            if (param != null)
-            {
-                for (int i = 0; i < param.Count; i++)
-                {
-                    cmd.Parameters.AddWithValue("@" + param[i].ToString(), value[i]);
-                }
-            }
-
-            cmd.ExecuteNonQuery();
+            int count = (int)cmd.ExecuteScalar();
             conn.Close();
+
+            return count > 0;
         }
+
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace parcelCompany.DataLinkLayer.Models
 {
-    internal class DriverDetails
+    public class DriverDetails
     {
         public string driverName { get; set; }
         public string driverVehiclePlate { get; set; }

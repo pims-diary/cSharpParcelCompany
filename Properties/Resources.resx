@@ -118,16 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pngtree-courier-with-a-lot-of-parcels-isolated-on-white-background-illustration-png-image_13122701" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pngtree-courier-with-a-lot-of-parcels-isolated-on-white-background-illustration-png-image_13122701.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="wrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\wrong.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="percel_com" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\percel_com.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="UML (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UML (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="wrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\wrong.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="a462e91a92a6e8b69c8b82ca79fc2f46" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a462e91a92a6e8b69c8b82ca79fc2f46.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngtree-courier-with-a-lot-of-parcels-isolated-on-white-background-illustration-png-image_13122701" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-courier-with-a-lot-of-parcels-isolated-on-white-background-illustration-png-image_13122701.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wrong-icon-graphic-design-template-vector-24504466" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wrong-icon-graphic-design-template-vector-24504466.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5d95df677be36" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5d95df677be36.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

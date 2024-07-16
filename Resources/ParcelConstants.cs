@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace parcelCompany.Resources
+﻿namespace parcelCompany.Resources
 {
     internal class ParcelConstants
     {
@@ -40,6 +34,50 @@ namespace parcelCompany.Resources
         public const string CustomerName = "CustomerName";
         public const string CustomerAddress = "CustomerAddress";
         public const string CustomerEmail = "CustomerEmail";
-        public const string CustomerPhone = "CustomerPhone";
+        public const string CustomerMobile = "CustomerMobile";
+    }
+
+    internal class Messages
+    {
+        public const string EmptyFieldBody = " cannot be left empty.";
+        public const string EmptyFieldTitle = "Empty Field Error!";
+        public const string CreateCustomerSuccessBody = "New customer created! New customer ID: ";
+        public const string CreateParcelSuccessBody = "New parcel created! Parcel Tracking ID: ";
+    }
+
+    internal class ContainerCost
+    {
+        public const double Drum = 50.0;
+        public const double Box = 30.0;
+        public const double Palette = 20.0;
+        public const double Receptacle = 10.0;
+    }
+
+    internal class VesselSizeMultiplier
+    {
+        public const double Large = 2.0;
+        public const double Medium = 1.5;
+        public const double Small = 1.0;
+    }
+
+    internal class PickUpCost
+    {
+        public const double InOffice = 0.0;
+        public const double LargePickUp = 40.0;
+        public const double MediumPickUp = 20.0;
+        public const double SmallPickUp = 10.0;
+    }
+
+    internal class Tax
+    {
+        public const double gstPercent = 15.0;
+    }
+
+    internal class DeliveryStatus
+    {
+        public const string Initiated = "Initiated";
+        public const string Warehouse = "Warehouse";
+        public const string Shipped = "Shipped";
+        public const string Delivered = "Delivered";
     }
 }
