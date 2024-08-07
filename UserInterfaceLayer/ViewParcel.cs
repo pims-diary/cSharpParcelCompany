@@ -102,5 +102,15 @@ namespace parcelCompany.UserInterfaceLayer
                 }
             }
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitbttn_Click(object sender, EventArgs e)
+        {
+            System.Environment.Exit(1);
+        }
     }
 }

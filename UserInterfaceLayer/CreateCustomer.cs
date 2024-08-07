@@ -9,11 +9,13 @@ namespace parcelCompany.UserInterfaceLayer
 {
     public partial class CreateCustomer : Form
     {
+        // OOP Concept - Encapsulation - A constructor is never private.
         public CreateCustomer()
         {
             InitializeComponent();
         }
 
+        // OOP Concept - Encapsulation - private method. It cannot be accessed from outside this class.
         private void addbttn_Click(object sender, EventArgs e)
         {
             if (UiUtility.isEmpty(customerNameTextBox.Text, "Customer Name"))
@@ -45,7 +47,7 @@ namespace parcelCompany.UserInterfaceLayer
 
             CustomerData operation1 = new CustomerData();
 
-            operation1.CreateACustomer(customer);
+            operation1.Create(customer);
             UiUtility.showSucces(Resources.Messages.CreateCustomerSuccessBody + customer.CustomerId, "Success!");
 
             CustomerData operation2 = new CustomerData();
@@ -54,6 +56,7 @@ namespace parcelCompany.UserInterfaceLayer
             UiUtility.populateDataGrid(data, dataGridView1);
         }
 
+        // OOP Concept - Encapsulation - private method. It cannot be accessed from outside this class.
         private void clearbttn_Click(object sender, EventArgs e)
         {
             UiUtility.clearAllFields((ControlCollection)this.Controls);

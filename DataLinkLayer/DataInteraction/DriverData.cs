@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace parcelCompany.DataLinkLayer.DataInteraction
 {
+    // OOP Concept - Inheritance - This is the child class
     internal class DriverData: BaseData
     {
         public SqlDataAdapter ShowDriverDetails(string driverId)

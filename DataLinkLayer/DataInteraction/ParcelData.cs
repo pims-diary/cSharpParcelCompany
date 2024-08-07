@@ -5,9 +5,9 @@ using System;
 
 namespace parcelCompany.DataLinkLayer.DataInteraction
 {
+    // OOP Concept - Inheritance - This is the child class
     internal class ParcelData : BaseData
     {
-
         public void CreateParcel(ParcelDetails parcel)
         {
             string insertCommandString = "INSERT INTO ParcelInfo (" +
@@ -140,7 +140,8 @@ namespace parcelCompany.DataLinkLayer.DataInteraction
             return null;
         }
 
-        public bool doesParcelExist(string trackId)
+        // OOP Concept - Encapsulation - private method. It cannot be accessed from outside this class.
+        private bool doesParcelExist(string trackId)
         {
             SqlCommand cmd = new SqlCommand("select COUNT(*) from ParcelInfo where ParcelTrackID=@ParcelTrackID", conn);
             cmd.Parameters.AddWithValue("@ParcelTrackID", trackId);

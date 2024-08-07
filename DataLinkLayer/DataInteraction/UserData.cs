@@ -10,6 +10,7 @@ namespace parcelCompany.DataLinkLayer.DataInteraction
         ServerError
     }
 
+    // OOP Concept - Inheritance - This is the child class
     internal class UserData: BaseData
     {
         public LoginStatus ValidateLogin(string username, string password)

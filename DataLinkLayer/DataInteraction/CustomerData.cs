@@ -4,10 +4,14 @@ using System.Data.SqlClient;
 
 namespace parcelCompany.DataLinkLayer.DataInteraction
 {
+    // OOP Concept - Inheritance - This is the child class
     internal class CustomerData : BaseData
     {
 
-        public void CreateACustomer(CustomerDetails customer)
+
+        // OOP Concept - Polymorphism - This is a method in the child class which overrides a method
+        // in its parent class.
+        public void Create(CustomerDetails customer)
         {
             string insertCommandString = "INSERT INTO CustomerInfo (" +
                 "CustomerID, CustomerName, CustomerAddress, CustomerEmail, CustomerMobile) " +

@@ -42,7 +42,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Uighur", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(343, 9);
+            this.label1.Location = new System.Drawing.Point(229, 6);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(261, 57);
             this.label1.TabIndex = 5;
@@ -50,18 +51,20 @@
             // 
             // customerIdTextBox
             // 
-            this.customerIdTextBox.Location = new System.Drawing.Point(339, 108);
+            this.customerIdTextBox.Location = new System.Drawing.Point(226, 70);
+            this.customerIdTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customerIdTextBox.Name = "customerIdTextBox";
-            this.customerIdTextBox.Size = new System.Drawing.Size(455, 26);
+            this.customerIdTextBox.Size = new System.Drawing.Size(305, 20);
             this.customerIdTextBox.TabIndex = 39;
             // 
             // searchButton
             // 
             this.searchButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.searchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchButton.Location = new System.Drawing.Point(131, 194);
+            this.searchButton.Location = new System.Drawing.Point(87, 126);
+            this.searchButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(223, 66);
+            this.searchButton.Size = new System.Drawing.Size(149, 43);
             this.searchButton.TabIndex = 38;
             this.searchButton.Text = "SEARCH";
             this.searchButton.UseVisualStyleBackColor = false;
@@ -70,20 +73,22 @@
             // customerDataGridView
             // 
             this.customerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.customerDataGridView.Location = new System.Drawing.Point(68, 325);
+            this.customerDataGridView.Location = new System.Drawing.Point(45, 211);
+            this.customerDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.customerDataGridView.Name = "customerDataGridView";
             this.customerDataGridView.RowHeadersWidth = 62;
             this.customerDataGridView.RowTemplate.Height = 28;
-            this.customerDataGridView.Size = new System.Drawing.Size(868, 167);
+            this.customerDataGridView.Size = new System.Drawing.Size(579, 109);
             this.customerDataGridView.TabIndex = 37;
             // 
             // clearButton
             // 
             this.clearButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.clearButton.Font = new System.Drawing.Font("Microsoft Uighur", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearButton.Location = new System.Drawing.Point(397, 194);
+            this.clearButton.Location = new System.Drawing.Point(265, 126);
+            this.clearButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.clearButton.Name = "clearButton";
-            this.clearButton.Size = new System.Drawing.Size(223, 66);
+            this.clearButton.Size = new System.Drawing.Size(149, 43);
             this.clearButton.TabIndex = 36;
             this.clearButton.Text = "CLEAR";
             this.clearButton.UseVisualStyleBackColor = false;
@@ -92,9 +97,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(152, 114);
+            this.label6.Location = new System.Drawing.Point(101, 74);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(103, 20);
+            this.label6.Size = new System.Drawing.Size(68, 13);
             this.label6.TabIndex = 35;
             this.label6.Text = "Customer ID:";
             // 
@@ -102,9 +108,10 @@
             // 
             this.backButton.BackColor = System.Drawing.SystemColors.Info;
             this.backButton.Font = new System.Drawing.Font("Microsoft Uighur", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backButton.Location = new System.Drawing.Point(659, 194);
+            this.backButton.Location = new System.Drawing.Point(439, 126);
+            this.backButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(223, 66);
+            this.backButton.Size = new System.Drawing.Size(149, 43);
             this.backButton.TabIndex = 40;
             this.backButton.Text = "BACK";
             this.backButton.UseVisualStyleBackColor = false;
@@ -112,10 +119,10 @@
             // 
             // SearchCustomer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1010, 727);
+            this.ClientSize = new System.Drawing.Size(1014, 473);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.customerIdTextBox);
             this.Controls.Add(this.searchButton);
@@ -123,6 +130,7 @@
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SearchCustomer";
             this.Text = "SearchCustomer";
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();

@@ -117,6 +117,7 @@ namespace parcelCompany.Controllers
             return container;
         }
 
+        // OOP Concept - Encapsulation - public method. It can be accessed from outside this class.
         public DeliveryDetails setPickUpType(DeliveryDetails delivery, string pickup)
         {
             delivery.remotePickUp = !pickup.Equals("Courier Office");
@@ -124,7 +125,8 @@ namespace parcelCompany.Controllers
             return delivery;
         }
 
-        public double calculateTax(double parcelCost, double deliveryCost)
+        // OOP Concept - Encapsulation - private method. It cannot be accessed from outside this class.
+        private double calculateTax(double parcelCost, double deliveryCost)
         {
             double amount = (parcelCost + deliveryCost);
             double tax = amount * (Resources.Tax.gstPercent / 100.0);
@@ -132,7 +134,8 @@ namespace parcelCompany.Controllers
             return tax;
         }
 
-        public double calculateTotalCost(double parcelCost, double deliveryCost, double tax)
+        // OOP Concept - Encapsulation - private method. It cannot be accessed from outside this class.
+        private double calculateTotalCost(double parcelCost, double deliveryCost, double tax)
         {
             return (parcelCost + deliveryCost + tax);
         }

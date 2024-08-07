@@ -40,7 +40,8 @@
             // 
             this.log.AutoSize = true;
             this.log.Font = new System.Drawing.Font("Microsoft Uighur", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.log.Location = new System.Drawing.Point(448, 59);
+            this.log.Location = new System.Drawing.Point(299, 38);
+            this.log.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.log.Name = "log";
             this.log.Size = new System.Drawing.Size(144, 62);
             this.log.TabIndex = 0;
@@ -50,7 +51,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(176, 198);
+            this.label1.Location = new System.Drawing.Point(117, 129);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 43);
             this.label1.TabIndex = 1;
@@ -60,7 +62,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(176, 327);
+            this.label2.Location = new System.Drawing.Point(117, 213);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(128, 43);
             this.label2.TabIndex = 2;
@@ -68,16 +71,19 @@
             // 
             // username
             // 
-            this.username.Location = new System.Drawing.Point(415, 198);
+            this.username.Location = new System.Drawing.Point(277, 129);
+            this.username.Margin = new System.Windows.Forms.Padding(2);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(322, 26);
+            this.username.Size = new System.Drawing.Size(216, 20);
             this.username.TabIndex = 3;
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(415, 327);
+            this.password.Location = new System.Drawing.Point(277, 213);
+            this.password.Margin = new System.Windows.Forms.Padding(2);
             this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(322, 26);
+            this.password.PasswordChar = '*';
+            this.password.Size = new System.Drawing.Size(216, 20);
             this.password.TabIndex = 4;
             // 
             // loginbttn
@@ -85,9 +91,10 @@
             this.loginbttn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.loginbttn.Font = new System.Drawing.Font("Microsoft Uighur", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginbttn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.loginbttn.Location = new System.Drawing.Point(459, 472);
+            this.loginbttn.Location = new System.Drawing.Point(306, 307);
+            this.loginbttn.Margin = new System.Windows.Forms.Padding(2);
             this.loginbttn.Name = "loginbttn";
-            this.loginbttn.Size = new System.Drawing.Size(111, 61);
+            this.loginbttn.Size = new System.Drawing.Size(74, 40);
             this.loginbttn.TabIndex = 5;
             this.loginbttn.Text = "Login";
             this.loginbttn.UseVisualStyleBackColor = false;
@@ -95,16 +102,18 @@
             // 
             // loginPageStaff
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AcceptButton = this.loginbttn;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1017, 623);
+            this.ClientSize = new System.Drawing.Size(678, 405);
             this.Controls.Add(this.loginbttn);
             this.Controls.Add(this.password);
             this.Controls.Add(this.username);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.log);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "loginPageStaff";
             this.Text = "loginPageStaff";
             this.ResumeLayout(false);
